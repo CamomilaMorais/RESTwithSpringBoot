@@ -1,3 +1,10 @@
 # Default ignored files
+/target/
+/.classpath
+/.springBeans
+/.project
+/.settings
+/.gradle
 /shelf/
 /workspace.xml
+/build/
