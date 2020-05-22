@@ -19,11 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed24f6e7-b663-4731-bc8c-e3ab2cbcf96e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/controller/MathController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/camomila/controller/MathController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/math/SimpleMath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/camomila/math/SimpleMath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/request/converters/NumberConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/camomila/request/converters/NumberConverter.java" afterDir="false" />
+    <list default="true" id="ed24f6e7-b663-4731-bc8c-e3ab2cbcf96e" name="Default Changelist" comment="Uso de @Service e @Autowired">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/Startup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/camomila/Startup.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +85,14 @@
       <option name="presentableId" value="Default" />
       <updated>1590086747440</updated>
     </task>
+    <task id="LOCAL-00001" summary="Uso de @Service e @Autowired">
+      <created>1590187238080</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590187238080</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,6 +106,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Uso de @Service e @Autowired" />
+    <option name="LAST_COMMIT_MESSAGE" value="Uso de @Service e @Autowired" />
   </component>
   <component name="WindowStateProjectService">
     <state x="449" y="100" key="#com.intellij.ide.util.MemberChooser" timestamp="1590096621909">
@@ -147,6 +156,10 @@
       <screen x="0" y="0" width="1288" height="768" />
     </state>
     <state width="1245" height="239" key="GridCell.Tab.1.right/0.0.1288.768@0.0.1288.768" timestamp="1590097886922" />
+    <state x="236" y="117" key="Vcs.Push.Dialog.v2" timestamp="1590187257838">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state x="236" y="117" key="Vcs.Push.Dialog.v2/0.0.1288.768@0.0.1288.768" timestamp="1590187257838" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1590096787644">
       <screen x="0" y="0" width="1288" height="768" />
     </state>
