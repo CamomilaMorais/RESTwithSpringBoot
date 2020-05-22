@@ -1,5 +1,8 @@
 package com.camomila.request.converters;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class NumberConverter {
 
     public static Double convertToDouble(String strNumber) {
