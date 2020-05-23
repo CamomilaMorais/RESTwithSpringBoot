@@ -1,4 +1,4 @@
-package com.camomila.model;
+package com.camomila.data.model;
 
 import javax.persistence.*;
 import java.io.Serializable;

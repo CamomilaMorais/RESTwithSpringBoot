@@ -1,6 +1,6 @@
 package com.camomila.repository;
 
-import com.camomila.model.Person;
+import com.camomila.data.model.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
