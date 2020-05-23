@@ -2,6 +2,7 @@ package com.camomila.controller;
 
 import com.camomila.data.model.Person;
 import com.camomila.data.vo.PersonVO;
+import com.camomila.data.vo.v2.PersonVO_v2;
 import com.camomila.services.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -29,6 +30,11 @@ public class PersonController {
     @PostMapping
     public PersonVO create(@RequestBody PersonVO person) {
         return service.create(person);
+    }
+
+    @PostMapping("/v2")
+    public PersonVO_v2 create_v2(@RequestBody PersonVO_v2 person) {
+        return service.create_v2(person);
     }
 
     @PutMapping
