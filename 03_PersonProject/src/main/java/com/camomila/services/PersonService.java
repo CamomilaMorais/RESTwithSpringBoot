@@ -1,6 +1,9 @@
 package com.camomila.services;
 
+import com.camomila.exception.ResourceNotFoundException;
 import com.camomila.model.Person;
+import com.camomila.repository.PersonRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -10,46 +13,35 @@ import java.util.concurrent.atomic.AtomicLong;
 @Service
 public class PersonService {
 
-    private final AtomicLong counter = new AtomicLong();
+    @Autowired
+    PersonRepository repository;
 
     public Person create(Person person) {
-        return person;
+        return repository.save(person);
     }
 
     public Person update(Person person) {
-        return person;
+        Person entity = repository.findById(person.getId())
+                .orElseThrow(() -> new ResourceNotFoundException("No records found for this ID."));
+        entity.setFirstName(person.getFirstName());
+        entity.setLastName(person.getLastName());
+        entity.setAddress(person.getAddress());
+        entity .setGender(person.getGender());
+        return repository.save(entity);
     }
 
-    public void delete(String id) {
-
+    public void delete(Long id) {
+        Person entity = repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("No records found for this ID."));
+        repository.delete(entity);
     }
 
-    public Person findById(String id) {
-        Person person = new Person();
-        person.setId(counter.incrementAndGet());
-        person.setFirstName("Camila");
-        person.setLastName("Morais");
-        person.setAddress("São Paulo - SP");
-        person.setGender("Female");
-        return person;
+    public Person findById(Long id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("No records found for this ID."));
     }
 
     public List<Person> findAll() {
-        List<Person> persons = new ArrayList<Person>();
-        for (int i = 0 ; i < 8; i++){
-            Person person = mockPerson(i);
-            persons.add(person);
-        }
-        return persons;
-    }
-
-    private Person mockPerson(int i) {
-        Person person = new Person();
-        person.setId(counter.incrementAndGet());
-        person.setFirstName("Person Name" + i);
-        person.setLastName("Last Name" + i);
-        person.setAddress("Some Address in Brazil " + i);
-        person.setGender("Female");
-        return person;
+        return repository.findAll();
     }
 }
