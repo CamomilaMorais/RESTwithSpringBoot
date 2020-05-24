@@ -2,7 +2,7 @@ package com.camomila.converter;
 
 import com.camomila.converter.mocks.MockPerson;
 import com.camomila.data.model.Person;
-import com.camomila.data.vo.PersonVO;
+import com.camomila.data.vo.v1.PersonVO;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

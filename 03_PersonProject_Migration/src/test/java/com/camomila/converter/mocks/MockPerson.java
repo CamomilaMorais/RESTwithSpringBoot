@@ -1,7 +1,7 @@
 package com.camomila.converter.mocks;
 
 import com.camomila.data.model.Person;
-import com.camomila.data.vo.PersonVO;
+import com.camomila.data.vo.v1.PersonVO;
 
 import java.util.ArrayList;
 import java.util.List;

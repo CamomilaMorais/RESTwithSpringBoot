@@ -1,10 +1,7 @@
 package com.camomila.services;
 
-import com.camomila.controller.PersonController;
 import com.camomila.converter.DozerConverter;
-import com.camomila.converter.custom.PersonConverter;
-import com.camomila.data.vo.PersonVO;
-import com.camomila.data.vo.v2.PersonVO_v2;
+import com.camomila.data.vo.v1.PersonVO;
 import com.camomila.exception.ResourceNotFoundException;
 import com.camomila.data.model.Person;
 import com.camomila.repository.PersonRepository;
@@ -19,18 +16,9 @@ public class PersonService {
     @Autowired
     PersonRepository repository;
 
-    @Autowired
-    PersonConverter converter;
-
     public PersonVO create(PersonVO person) {
         var entity = DozerConverter.parseObject(person, Person.class);
         var vo = DozerConverter.parseObject(repository.save(entity), PersonVO.class);
-        return vo;
-    }
-
-    public PersonVO_v2 create_v2(PersonVO_v2 person) {
-        var entity = converter.converterVOToEntity(person);
-        var vo = converter.converterEntityToVO(repository.save(entity));
         return vo;
     }
 
