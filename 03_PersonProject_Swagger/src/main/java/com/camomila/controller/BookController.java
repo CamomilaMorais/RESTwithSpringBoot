@@ -1,7 +1,7 @@
 package com.camomila.controller;
 
-import com.camomila.data.vo.v1.PersonVO;
-import com.camomila.services.PersonServices;
+import com.camomila.data.vo.v1.BookVO;
+import com.camomila.services.BookServices;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,69 +13,70 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
 /**
  * Swagger Custom Annotation (Removal Allowed):
- *     other option -> @Api(value = "Person Endpoint", description = "Description for Person", tags = {"PersonEndpoint"})
+ *     other option -> @Api(value = "Book Endpoint", description = "Description for Book", tags = {"BookEndpoint"})
  */
-@Api(tags = {"PersonEndpoint"})
+@Api(tags = {"BookEndpoint"})
 @RestController
-@RequestMapping("api/person/v1")
-public class PersonController {
+@RequestMapping("api/book/v1")
+public class BookController {
 
     @Autowired
-    private PersonServices service;
+    private BookServices service;
 
     /**
      * Swagger Custom Annotation (Removal Allowed):
      */
-    @ApiOperation(value = "Find a specific Person by ID")
+    @ApiOperation(value = "Find a specific Book by ID")
     @GetMapping(value = "/{id}", produces = {"application/json", "application/xml", "application/x-yaml"})
-    public PersonVO findById(@PathVariable("id") Long id) {
-        PersonVO personVO = service.findById(id);
-        personVO.add(linkTo(methodOn(PersonController.class).findById(id)).withSelfRel());
-        return personVO;
+    public BookVO findById(@PathVariable("id") Long id) {
+        BookVO bookVO = service.findById(id);
+        bookVO.add(linkTo(methodOn(BookController.class).findById(id)).withSelfRel());
+        return bookVO;
     }
+
     /**
      * Swagger Custom Annotation (Removal Allowed):
      */
-    @ApiOperation(value = "Find all Persons")
+    @ApiOperation(value = "Find all Books")
     @GetMapping(produces = {"application/json", "application/xml", "application/x-yaml"})
-    public List<PersonVO> findAll() {
-        List<PersonVO> personsVO = service.findAll();
-        personsVO
+    public List<BookVO> findAll() {
+        List<BookVO> booksVO = service.findAll();
+        booksVO
                 .stream()
                 .forEach(
-                        p -> p.add(linkTo(methodOn(PersonController.class).findById(p.getKey())).withSelfRel())
+                        p -> p.add(linkTo(methodOn(BookController.class).findById(p.getKey())).withSelfRel())
                 );
-        return personsVO;
+        return booksVO;
     }
 
     /**
      * Swagger Custom Annotation (Removal Allowed):
      */
-    @ApiOperation(value = "Create a new Person")
+    @ApiOperation(value = "Create a new Book")
     @PostMapping(produces = {"application/json", "application/xml", "application/x-yaml"},
             consumes = {"application/json", "application/xml", "application/x-yaml"})
-    public PersonVO create(@RequestBody PersonVO person) {
-        PersonVO personVO = service.create(person);
-        personVO.add(linkTo(methodOn(PersonController.class).findById(person.getKey())).withSelfRel());
-        return personVO;
+    public BookVO create(@RequestBody BookVO book) {
+        BookVO bookVO = service.create(book);
+        bookVO.add(linkTo(methodOn(BookController.class).findById(book.getKey())).withSelfRel());
+        return bookVO;
     }
 
     /**
      * Swagger Custom Annotation (Removal Allowed):
      */
-    @ApiOperation(value = "Update a Person by ID")
+    @ApiOperation(value = "Update a Book by ID")
     @PutMapping(produces = {"application/json", "application/xml", "application/x-yaml"},
             consumes = {"application/json", "application/xml", "application/x-yaml"})
-    public PersonVO update(@RequestBody PersonVO person) {
-        PersonVO personVO = service.update(person);
-        personVO.add(linkTo(methodOn(PersonController.class).findById(person.getKey())).withSelfRel());
-        return personVO;
+    public BookVO update(@RequestBody BookVO book) {
+        BookVO bookVO = service.update(book);
+        bookVO.add(linkTo(methodOn(BookController.class).findById(book.getKey())).withSelfRel());
+        return bookVO;
     }
 
     /**
      * Swagger Custom Annotation (Removal Allowed):
      */
-    @ApiOperation(value = "Remove a Person by ID")
+    @ApiOperation(value = "Remove a Book by ID")
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") Long id) {
         service.delete(id);

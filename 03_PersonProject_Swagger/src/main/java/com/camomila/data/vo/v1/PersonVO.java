@@ -5,12 +5,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.github.dozermapper.core.Mapping;
 import org.springframework.hateoas.ResourceSupport;
-// import org.springframework.hateoas.RepresentationModel;
+/**
+ * For another version HATEOAS:
+ * import org.springframework.hateoas.RepresentationModel;
+ */
 import java.io.Serializable;
 import java.util.Objects;
 
 @JsonPropertyOrder({"id", "address", "firstName", "lastName", "gender"})
-// public class PersonVO extends RepresentationModel implements Serializable {
+/**
+ * For another version HATEOAS:
+ * public class PersonVO extends RepresentationModel implements Serializable {
+  */
 public class PersonVO extends ResourceSupport implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -20,12 +26,19 @@ public class PersonVO extends ResourceSupport implements Serializable {
     private Long key;
     private String firstName;
 
-    // @JsonProperty("last_name")
+    /**
+     * Annotation to modify the attribute's display mode by the client (for example, Postman).
+     * @JsonProperty("last_name")
+     */
+
     private String lastName;
 
     private String address;
 
-    // @JsonIgnore
+    /**
+     * Annotation to ignore the attribute in the view by the client (for example, Postman).
+     * @JsonIgnore
+     */
     private String gender;
 
     public PersonVO() {

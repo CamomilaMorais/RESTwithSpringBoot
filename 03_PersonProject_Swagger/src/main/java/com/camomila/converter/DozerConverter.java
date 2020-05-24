@@ -2,7 +2,6 @@ package com.camomila.converter;
 
 import com.github.dozermapper.core.DozerBeanMapperBuilder;
 import com.github.dozermapper.core.Mapper;
-
 import java.util.ArrayList;
 import java.util.List;
 

@@ -85,6 +85,4 @@ public class Person implements Serializable {
                 Objects.equals(address, person.address) &&
                 Objects.equals(gender, person.gender);
     }
-
-
 }
