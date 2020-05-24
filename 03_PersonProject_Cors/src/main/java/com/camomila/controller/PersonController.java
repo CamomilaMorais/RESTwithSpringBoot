@@ -16,6 +16,10 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
  *     other option -> @Api(value = "Person Endpoint", description = "Description for Person", tags = {"PersonEndpoint"})
  */
 @Api(tags = {"PersonEndpoint"})
+/**
+ * Habilitar Cross Domain (Controller):
+ * @CrossOrigin
+ */
 @RestController
 @RequestMapping("api/person/v1")
 public class PersonController {
@@ -37,6 +41,13 @@ public class PersonController {
      * Swagger Custom Annotation (Removal Allowed):
      */
     @ApiOperation(value = "Find all Persons")
+    /**
+     * Habilitar Cross Domain (Endpoint):
+     * @CrossOrigin
+     *     Habilitar quais domains podem acessar o método através de Cross:
+     *     @CrossOrigin(origin = {"http://localhost:8080", "http://www.example.com.br"})
+     *         - No Postman, usar Header com Key "Origin" e Value igual à URL do domain que desejar.
+     */
     @GetMapping(produces = {"application/json", "application/xml", "application/x-yaml"})
     public List<PersonVO> findAll() {
         List<PersonVO> personsVO = service.findAll();
