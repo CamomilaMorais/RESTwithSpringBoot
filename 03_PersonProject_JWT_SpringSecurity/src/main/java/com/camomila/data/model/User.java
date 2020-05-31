@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User implements UserDetails, Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -61,16 +61,6 @@ public class User implements UserDetails, Serializable {
     }
 
     @Override
-    public String getPassword() {
-        return this.password;
-    }
-
-    @Override
-    public String getUsername() {
-        return this.userName;
-    }
-
-    @Override
     public boolean isAccountNonExpired() {
         return this.accountNonExpired;
     }
@@ -98,6 +88,11 @@ public class User implements UserDetails, Serializable {
         this.id = id;
     }
 
+    @Override
+    public String getUsername() {
+        return this.userName;
+    }
+
     public String getUserName() {
         return userName;
     }
@@ -112,6 +107,11 @@ public class User implements UserDetails, Serializable {
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
+    }
+
+    @Override
+    public String getPassword() {
+        return this.password;
     }
 
     public void setPassword(String password) {
