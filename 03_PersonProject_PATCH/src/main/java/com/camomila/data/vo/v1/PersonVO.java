@@ -12,7 +12,7 @@ import org.springframework.hateoas.ResourceSupport;
 import java.io.Serializable;
 import java.util.Objects;
 
-@JsonPropertyOrder({"id", "address", "firstName", "lastName", "gender"})
+@JsonPropertyOrder({"id", "address", "firstName", "lastName", "gender", "enabled"})
 /**
  * For another version HATEOAS:
  * public class PersonVO extends RepresentationModel implements Serializable {
@@ -40,6 +40,16 @@ public class PersonVO extends ResourceSupport implements Serializable {
      * @JsonIgnore
      */
     private String gender;
+
+    public Boolean getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    private Boolean enabled;
 
     public PersonVO() {
     }
@@ -94,11 +104,12 @@ public class PersonVO extends ResourceSupport implements Serializable {
                 firstName.equals(personVO.firstName) &&
                 lastName.equals(personVO.lastName) &&
                 address.equals(personVO.address) &&
-                gender.equals(personVO.gender);
+                gender.equals(personVO.gender) &&
+                enabled.equals(personVO.enabled);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), key, firstName, lastName, address, gender);
+        return Objects.hash(super.hashCode(), key, firstName, lastName, address, gender, enabled);
     }
 }

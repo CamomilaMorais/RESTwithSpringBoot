@@ -7,6 +7,7 @@ import com.camomila.data.model.Person;
 import com.camomila.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -31,6 +32,18 @@ public class PersonServices {
         entity .setGender(person.getGender());
         var vo = DozerConverter.parseObject(repository.save(entity), PersonVO.class);
         return vo;
+    }
+
+    /**
+     * Notation de controlar a transação, visto que a manipulação abaixo não é padrão do Spring Data (responsável
+     * automático pelas transações).
+     */
+    @Transactional
+    public PersonVO disablePerson(Long id) {
+        repository.disablePersons(id);
+        var entity = repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("No records found for this ID."));
+        return DozerConverter.parseObject(entity, PersonVO.class);
     }
 
     public void delete(Long id) {

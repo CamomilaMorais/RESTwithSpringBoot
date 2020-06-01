@@ -83,6 +83,14 @@ public class PersonController {
         return personVO;
     }
 
+    @ApiOperation(value = "Disable a specific Person by your ID")
+    @PatchMapping(value = "/{id}", produces = {"application/json", "application/xml", "application/x-yaml"})
+    public PersonVO disablePerson(@PathVariable("id") Long id) {
+        PersonVO personVO = service.disablePerson(id);
+        personVO.add(linkTo(methodOn(PersonController.class).findById(id)).withSelfRel());
+        return personVO;
+    }
+
     /**
      * Swagger Custom Annotation (Removal Allowed):
      */

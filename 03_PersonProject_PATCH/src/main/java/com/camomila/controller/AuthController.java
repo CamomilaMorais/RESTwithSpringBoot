@@ -4,6 +4,7 @@ import static org.springframework.http.ResponseEntity.ok;
 import com.camomila.repository.UserRepository;
 import com.camomila.security.AccountCredentialsVO;
 import com.camomila.security.jwt.JwtTokenProvider;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.Map;
 
+@Api(tags = "AuthenticationEndpoint")
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
@@ -31,6 +33,7 @@ public class AuthController {
     UserRepository repository;
 
     @ApiOperation(value = "Authenticate a user by credentials")
+    @SuppressWarnings("rawtypes")
     @PostMapping(value = "/singin", produces = {"application/json", "application/xml", "application/x-yaml"},
             consumes = {"application/json", "application/xml", "application/x-yaml"})
     public ResponseEntity singin(@RequestBody AccountCredentialsVO data){
