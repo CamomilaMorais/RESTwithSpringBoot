@@ -34,6 +34,9 @@ public class PersonController {
     @Autowired
     private PersonServices service;
 
+    @Autowired
+    PagedResourcesAssembler<PersonVO> assembler;
+
     /**
      * Swagger Custom Annotation (Removal Allowed):
      */
@@ -56,11 +59,10 @@ public class PersonController {
      *         - No Postman, usar Header com Key "Origin" e Value igual à URL do domain que desejar.
      */
     @GetMapping(produces = {"application/json", "application/xml", "application/x-yaml"})
-    public ResponseEntity<PagedResources<PersonVO>> findAll(
+    public ResponseEntity<?> findAll(
             @RequestParam(value="page", defaultValue="0") int page,
             @RequestParam(value="limit", defaultValue="12") int limit,
-            @RequestParam(value="direction", defaultValue="asc") String direction,
-            PagedResourcesAssembler assembler) {
+            @RequestParam(value="direction", defaultValue="asc") String direction) {
 
         var sortDirection = "desc".equalsIgnoreCase(direction)? Sort.Direction.DESC : Sort.Direction.ASC;
 
@@ -72,17 +74,18 @@ public class PersonController {
                 .forEach(
                         p -> p.add(linkTo(methodOn(PersonController.class).findById(p.getKey())).withSelfRel())
                 );
-        return new ResponseEntity<>(assembler.toResource(persons), HttpStatus.OK);
+        PagedResources<?> resources = assembler.toResource(persons);
+        
+        return new ResponseEntity<>(resources, HttpStatus.OK);
     }
 
     @ApiOperation(value = "Find all Persons with a Token Name")
     @GetMapping(value = "findPersonByName/{firstName}",produces = {"application/json", "application/xml", "application/x-yaml"})
-    public ResponseEntity<PagedResources<PersonVO>> findPersonByName(
+    public ResponseEntity<?> findPersonByName(
             @PathVariable("firstName") String firstName,
             @RequestParam(value="page", defaultValue="0") int page,
             @RequestParam(value="limit", defaultValue="12") int limit,
-            @RequestParam(value="direction", defaultValue="asc") String direction,
-            PagedResourcesAssembler assembler) {
+            @RequestParam(value="direction", defaultValue="asc") String direction) {
 
         var sortDirection = "desc".equalsIgnoreCase(direction)? Sort.Direction.DESC : Sort.Direction.ASC;
 
@@ -94,7 +97,9 @@ public class PersonController {
                 .forEach(
                         p -> p.add(linkTo(methodOn(PersonController.class).findById(p.getKey())).withSelfRel())
                 );
-        return new ResponseEntity<>(assembler.toResource(persons), HttpStatus.OK);
+        PagedResources<?> resources = assembler.toResource(persons);
+
+        return new ResponseEntity<>(resources, HttpStatus.OK);
     }
 
     /**
