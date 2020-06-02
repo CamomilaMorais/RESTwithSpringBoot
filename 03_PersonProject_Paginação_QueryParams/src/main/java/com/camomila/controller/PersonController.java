@@ -75,7 +75,7 @@ public class PersonController {
                         p -> p.add(linkTo(methodOn(PersonController.class).findById(p.getKey())).withSelfRel())
                 );
         PagedResources<?> resources = assembler.toResource(persons);
-        
+
         return new ResponseEntity<>(resources, HttpStatus.OK);
     }
 

@@ -5,9 +5,16 @@ import com.camomila.services.BookServices;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PagedResourcesAssembler;
+import org.springframework.hateoas.PagedResources;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.List;
+
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
@@ -22,6 +29,9 @@ public class BookController {
 
     @Autowired
     private BookServices service;
+
+    @Autowired
+    PagedResourcesAssembler<BookVO> assembler;
 
     /**
      * Swagger Custom Annotation (Removal Allowed):
@@ -39,14 +49,49 @@ public class BookController {
      */
     @ApiOperation(value = "Find all Books")
     @GetMapping(produces = {"application/json", "application/xml", "application/x-yaml"})
-    public List<BookVO> findAll() {
-        List<BookVO> booksVO = service.findAll();
-        booksVO
+    public ResponseEntity<?> findAll(
+            @RequestParam(value="page", defaultValue="0") int page,
+            @RequestParam(value="limit", defaultValue="12") int limit,
+            @RequestParam(value="direction", defaultValue="asc") String direction) {
+
+        var sortDirection = "desc".equalsIgnoreCase(direction)? Sort.Direction.DESC : Sort.Direction.ASC;
+
+        Pageable pageable = PageRequest.of(page, limit, Sort.by(sortDirection, "title"));
+
+        Page<BookVO> books = service.findAll(pageable);
+        books
                 .stream()
                 .forEach(
                         p -> p.add(linkTo(methodOn(BookController.class).findById(p.getKey())).withSelfRel())
                 );
-        return booksVO;
+
+        PagedResources<?> resources = assembler.toResource(books);
+
+        return new ResponseEntity<>(resources, HttpStatus.OK);
+    }
+
+    @ApiOperation(value = "Find all Books with a Token Title")
+    @GetMapping(value = "/findBookByTitle/{title}", produces = {"application/json", "application/xml", "application/x-yaml"})
+    public ResponseEntity<?> findBookByTitle(
+            @PathVariable(value="title") String title,
+            @RequestParam(value="page", defaultValue="0") int page,
+            @RequestParam(value="limit", defaultValue="12") int limit,
+            @RequestParam(value="direction", defaultValue="asc") String direction) {
+
+        var sortDirection = "desc".equalsIgnoreCase(direction)? Sort.Direction.DESC : Sort.Direction.ASC;
+
+        Pageable pageable = PageRequest.of(page, limit, Sort.by(sortDirection, "title"));
+
+        Page<BookVO> books = service.findBookByTitle(title, pageable);
+        books
+                .stream()
+                .forEach(
+                        p -> p.add(linkTo(methodOn(BookController.class).findById(p.getKey())).withSelfRel())
+                );
+
+        PagedResources<?> resources = assembler.toResource(books);
+
+        return new ResponseEntity<>(resources, HttpStatus.OK);
     }
 
     /**
