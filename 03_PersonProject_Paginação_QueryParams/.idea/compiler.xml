@@ -7,12 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="03_PersonProject_Swagger" />
+        <module name="03_PersonProject_Hateoas" />
         <module name="03_PersonProject" />
-        <module name="03_PersonProject_PATCH" />
+        <module name="03_PersonProject_Paginação_QueryParams" />
         <module name="03_PersonProject_Cors" />
         <module name="03_PersonProject_Migration" />
         <module name="03_PersonProject_JWT_SpringSecurity" />
-        <module name="03_PersonProject_Hateoas" />
+        <module name="03_PersonProject_PATCH" />
       </profile>
     </annotationProcessing>
   </component>
@@ -24,6 +25,7 @@
       <module name="03_PersonProject_JWT_SpringSecurity" options="-parameters" />
       <module name="03_PersonProject_Migration" options="-parameters" />
       <module name="03_PersonProject_PATCH" options="-parameters" />
+      <module name="03_PersonProject_Paginação_QueryParams" options="-parameters" />
       <module name="03_PersonProject_Swagger" options="-parameters" />
     </option>
   </component>

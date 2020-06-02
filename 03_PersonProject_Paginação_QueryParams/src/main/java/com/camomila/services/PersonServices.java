@@ -6,6 +6,8 @@ import com.camomila.exception.ResourceNotFoundException;
 import com.camomila.data.model.Person;
 import com.camomila.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -58,7 +60,16 @@ public class PersonServices {
         return DozerConverter.parseObject(entity, PersonVO.class);
     }
 
-    public List<PersonVO> findAll() {
-        return DozerConverter.parseListObjects(repository.findAll(), PersonVO.class);
+    public Page<PersonVO> findAll(Pageable pageable) {
+        /**
+         * O valor será do tipo List<Entity>
+         * var entities = repository.findAll(pageable).getContent();
+         */
+        var page = repository.findAll(pageable);
+        return page.map(this::convertToPersonVO);
+    }
+
+    private PersonVO convertToPersonVO(Person person) {
+        return DozerConverter.parseObject(person, PersonVO.class);
     }
 }

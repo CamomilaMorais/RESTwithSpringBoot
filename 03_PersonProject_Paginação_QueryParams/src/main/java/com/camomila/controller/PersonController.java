@@ -5,6 +5,13 @@ import com.camomila.services.PersonServices;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PagedResourcesAssembler;
+import org.springframework.hateoas.PagedResources;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -49,14 +56,23 @@ public class PersonController {
      *         - No Postman, usar Header com Key "Origin" e Value igual à URL do domain que desejar.
      */
     @GetMapping(produces = {"application/json", "application/xml", "application/x-yaml"})
-    public List<PersonVO> findAll() {
-        List<PersonVO> personsVO = service.findAll();
-        personsVO
+    public ResponseEntity<PagedResources<PersonVO>> findAll(
+            @RequestParam(value="page", defaultValue="0") int page,
+            @RequestParam(value="limit", defaultValue="12") int limit,
+            @RequestParam(value="direction", defaultValue="asc") String direction,
+            PagedResourcesAssembler assembler) {
+
+        var sortDirection = "desc".equalsIgnoreCase(direction)? Sort.Direction.DESC : Sort.Direction.ASC;
+
+        Pageable pageable = PageRequest.of(page, limit, Sort.by(sortDirection, "firstName"));
+
+        Page<PersonVO> persons = service.findAll(pageable);
+        persons
                 .stream()
                 .forEach(
                         p -> p.add(linkTo(methodOn(PersonController.class).findById(p.getKey())).withSelfRel())
                 );
-        return personsVO;
+        return new ResponseEntity<>(assembler.toResource(persons), HttpStatus.OK);
     }
 
     /**
