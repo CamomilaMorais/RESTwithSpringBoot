@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="03_PersonProject_Swagger" />
+        <module name="03_PersonProject" />
+        <module name="03_PersonProject_Paginação_QueryParams" />
+        <module name="03_PersonProject_PATCH" />
+        <module name="03_PersonProject_Upload_Download" />
+        <module name="03_PersonProject_Cors" />
+        <module name="03_PersonProject_Migration" />
+        <module name="03_PersonProject_JWT_SpringSecurity" />
+        <module name="03_PersonProject_Hateoas" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="03_PersonProject" options="-parameters" />
+      <module name="03_PersonProject_Cors" options="-parameters" />
+      <module name="03_PersonProject_Hateoas" options="-parameters" />
+      <module name="03_PersonProject_JWT_SpringSecurity" options="-parameters" />
+      <module name="03_PersonProject_Migration" options="-parameters" />
+      <module name="03_PersonProject_PATCH" options="-parameters" />
+      <module name="03_PersonProject_Paginação_QueryParams" options="-parameters" />
+      <module name="03_PersonProject_Swagger" options="-parameters" />
+      <module name="03_PersonProject_Upload_Download" options="-parameters" />
+    </option>
+  </component>
+</project>
