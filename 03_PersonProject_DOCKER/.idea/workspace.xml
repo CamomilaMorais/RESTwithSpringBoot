@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fa1535bd-0239-45ef-9e65-5177f8f7536a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/03_PersonProject_Cors.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/03_PersonProject_DOCKER.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/03_PersonProject_JWT_SpringSecurity.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/03_PersonProject_Paginação_QueryParams.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/03_PersonProject.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Collections/Anotações.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Collections/RESTful API with Spring Boot 2.1.3.postman_collection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/Startup.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/config/FileStorageConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/config/SwaggerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/config/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/controller/BookController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/controller/FileController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/controller/PersonController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/converter/DozerConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/data/model/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/data/model/Permission.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/data/model/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/data/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/data/vo/v1/BookVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/data/vo/v1/PersonVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/data/vo/v1/UploadFileResponseVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/exception/ExceptionResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/exception/FileStorageException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/exception/InvalidJwtAuthenticationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/exception/MyFileNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/exception/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/exception/handler/CustomizedResponseEntityExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/repository/BookRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/repository/PersonRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/security/AccountCredentialsVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/security/jwt/JwtConfigurer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/security/jwt/JwtTokenFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/security/jwt/JwtTokenProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/serialization/converter/YamlJackson2HttpMessageConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/services/BookServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/services/FileStorageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/services/PersonServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/camomila/services/UserServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V10__Insert_Data_In_User_Permission.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V11__After_Table_Person.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V12__Populate_Person_With_Many.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Create_Table_Person.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Populate_Table_Person.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V3__Create_Table_Book.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V4__Insert_Data_In_Books.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V5__Create_Table_Permission.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V6__Insert_Data_In_Permission.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V7__Create_Table_Users.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V8__Insert_Data_In_Users.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V9__Create_Table_User_Permission.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/camomila/converter/DozerConverterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/camomila/converter/mocks/MockPerson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/Startup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/config/FileStorageConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/config/SwaggerConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/config/WebConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/controller/AuthController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/controller/BookController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/controller/FileController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/controller/PersonController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/converter/DozerConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/data/model/Book.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/data/model/Permission.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/data/model/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/data/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/data/vo/v1/BookVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/data/vo/v1/PersonVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/data/vo/v1/UploadFileResponseVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/exception/ExceptionResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/exception/FileStorageException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/exception/InvalidJwtAuthenticationException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/exception/MyFileNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/exception/ResourceNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/exception/handler/CustomizedResponseEntityExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/repository/BookRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/repository/PersonRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/security/AccountCredentialsVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/security/jwt/JwtConfigurer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/security/jwt/JwtTokenFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/security/jwt/JwtTokenProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/serialization/converter/YamlJackson2HttpMessageConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/services/BookServices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/services/FileStorageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/services/PersonServices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/camomila/services/UserServices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V10__Insert_Data_In_User_Permission.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V11__After_Table_Person.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V12__Populate_Person_With_Many.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V1__Create_Table_Person.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V2__Populate_Table_Person.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V3__Create_Table_Book.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V4__Insert_Data_In_Books.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V5__Create_Table_Permission.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V6__Insert_Data_In_Permission.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V7__Create_Table_Users.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V8__Insert_Data_In_Users.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V9__Create_Table_User_Permission.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/camomila/converter/DozerConverterTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/camomila/converter/mocks/MockPerson.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1cFDfV6rDmsnxAGrGo7UEE9LBbH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/RESTwithSpringBoot" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\camila.morais\IdeaProjects\RESTwithSpringBoot\03_PersonProject\src\main\resources\db\migration" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.camomila.data.vo.v1" />
+      <recent name="com.camomila.exception" />
+      <recent name="com.camomila.services" />
+      <recent name="com.camomila.repository" />
+      <recent name="com.camomila.controller" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.camomila.exception" />
+      <recent name="com.camomila.data.vo.v2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Startup">
+    <configuration name="Startup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.camomila.Startup" />
+      <module name="03_PersonProject_DOCKER" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.camomila.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DozerConverterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="03_PersonProject_Hateoas" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.camomila.converter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.camomila.converter" />
+      <option name="MAIN_CLASS_NAME" value="com.camomila.converter.DozerConverterTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Startup" />
+        <item itemvalue="JUnit.DozerConverterTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fa1535bd-0239-45ef-9e65-5177f8f7536a" name="Default Changelist" comment="" />
+      <created>1590115550064</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590115550064</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="247" y="3" key="#DozerConverterTest" timestamp="1590288174354">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state x="247" y="3" key="#DozerConverterTest/0.0.1288.768@0.0.1288.768" timestamp="1590288174354" />
+    <state x="124" y="0" key="#Project_Structure" timestamp="1590193793738">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state x="124" y="0" key="#Project_Structure/0.0.1288.768@0.0.1288.768" timestamp="1590193793738" />
+    <state x="341" y="3" key="#Startup" timestamp="1592177735857">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state x="341" y="3" key="#Startup/0.0.1288.768@0.0.1288.768" timestamp="1592177735857" />
+    <state x="98" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590297328194">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state x="98" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1288.768@0.0.1288.768" timestamp="1590297328194" />
+    <state x="364" y="186" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590172090170">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state x="364" y="186" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1288.768@0.0.1288.768" timestamp="1590172090170" />
+    <state x="423" y="88" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1590281221891">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state x="423" y="88" key="#com.intellij.ide.macro.MacrosDialog/0.0.1288.768@0.0.1288.768" timestamp="1590281221891" />
+    <state x="449" y="100" key="#com.intellij.ide.util.MemberChooser" timestamp="1592163229897">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state x="449" y="100" key="#com.intellij.ide.util.MemberChooser/0.0.1288.768@0.0.1288.768" timestamp="1592163229897" />
+    <state x="341" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590337311576">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state x="341" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1288.768@0.0.1288.768" timestamp="1590337311576" />
+    <state x="424" y="139" key="FileChooserDialogImpl" timestamp="1592178179218">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state x="424" y="139" key="FileChooserDialogImpl/0.0.1288.768@0.0.1288.768" timestamp="1592178179218" />
+    <state x="468" y="286" key="Github.CreateGistDialog" timestamp="1590272174303">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state x="468" y="286" key="Github.CreateGistDialog/0.0.1288.768@0.0.1288.768" timestamp="1590272174303" />
+    <state width="1245" height="239" key="GridCell.Tab.0.bottom" timestamp="1592178181232">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state width="1245" height="239" key="GridCell.Tab.0.bottom/0.0.1288.768@0.0.1288.768" timestamp="1592178181232" />
+    <state width="1245" height="239" key="GridCell.Tab.0.center" timestamp="1592178181232">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state width="1245" height="239" key="GridCell.Tab.0.center/0.0.1288.768@0.0.1288.768" timestamp="1592178181232" />
+    <state width="1245" height="239" key="GridCell.Tab.0.left" timestamp="1592178181232">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state width="1245" height="239" key="GridCell.Tab.0.left/0.0.1288.768@0.0.1288.768" timestamp="1592178181232" />
+    <state width="1245" height="239" key="GridCell.Tab.0.right" timestamp="1592178181232">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state width="1245" height="239" key="GridCell.Tab.0.right/0.0.1288.768@0.0.1288.768" timestamp="1592178181232" />
+    <state width="1245" height="242" key="GridCell.Tab.1.bottom" timestamp="1592166881095">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state width="1245" height="242" key="GridCell.Tab.1.bottom/0.0.1288.768@0.0.1288.768" timestamp="1592166881095" />
+    <state width="1245" height="242" key="GridCell.Tab.1.center" timestamp="1592166881094">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state width="1245" height="242" key="GridCell.Tab.1.center/0.0.1288.768@0.0.1288.768" timestamp="1592166881094" />
+    <state width="1245" height="242" key="GridCell.Tab.1.left" timestamp="1592166881094">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state width="1245" height="242" key="GridCell.Tab.1.left/0.0.1288.768@0.0.1288.768" timestamp="1592166881094" />
+    <state width="1245" height="242" key="GridCell.Tab.1.right" timestamp="1592166881094">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state width="1245" height="242" key="GridCell.Tab.1.right/0.0.1288.768@0.0.1288.768" timestamp="1592166881094" />
+    <state x="174" y="39" key="Maven.ArtifactSearchDialog" timestamp="1590287211665">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state x="174" y="39" key="Maven.ArtifactSearchDialog/0.0.1288.768@0.0.1288.768" timestamp="1590287211665" />
+    <state x="351" y="117" width="585" height="534" key="find.popup" timestamp="1590558380483">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state x="351" y="117" width="585" height="534" key="find.popup/0.0.1288.768@0.0.1288.768" timestamp="1590558380483" />
+    <state x="300" y="172" key="run.anything.popup" timestamp="1591063532771">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state x="300" y="172" key="run.anything.popup/0.0.1288.768@0.0.1288.768" timestamp="1591063532771" />
+    <state x="300" y="37" width="672" height="676" key="search.everywhere.popup" timestamp="1590558356392">
+      <screen x="0" y="0" width="1288" height="768" />
+    </state>
+    <state x="300" y="37" width="672" height="676" key="search.everywhere.popup/0.0.1288.768@0.0.1288.768" timestamp="1590558356392" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/camomila/controller/BookController.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="var10" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

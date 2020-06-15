@@ -1,0 +1,21 @@
+# Docker Commands 
+docker info
+
+Compilar o projeto do diretório:
+docker-compose build
+
+Compilação e Start no projeto do diretório:
+docker-compose up -d --build
+
+Shutdown no projeto do diretório:
+docker-compose down
+
+Listar o status dos Container:
+docker ps
+
+docker logs [CONTAINER ID]
+
+Subir as Images para o DockerHub:
+docker push [IMAGE]
+
+docker images
